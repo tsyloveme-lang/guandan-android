@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#063f32">
+  <title>经典掼蛋</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="xiaomi.css">
+</head>
+<body>
+  <main class="game">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">掼</span>
+        <div>
+          <h1>经典掼蛋</h1>
+          <p>单机练习场</p>
+        </div>
+      </div>
+      <div id="roundInfo" class="scoreboard">我方 2　对方 2</div>
+      <div class="actions">
+        <button id="helpBtn" class="ghost">规则</button>
+        <button id="newBtn" class="ghost">重开</button>
+      </div>
+    </header>
+
+    <section class="table">
+      <div class="table-emblem" aria-hidden="true">
+        <span>掼</span>
+        <small>GUAN DAN</small>
+      </div>
+      <div class="team-tag team-us">我方</div>
+      <div class="team-tag team-them">对方</div>
+      <div id="player2" class="seat north"></div>
+      <div id="player1" class="seat west"></div>
+      <div class="center">
+        <div id="status" class="status">正在发牌……</div>
+        <div id="lastPlay" class="last-play"></div>
+      </div>
+      <div id="player3" class="seat east"></div>
+      <div class="south">
+        <div id="player0" class="seat human-seat"></div>
+        <div id="hand" class="hand"></div>
+        <div class="controls">
+          <button id="hintBtn" class="control hint">提示</button>
+          <button id="passBtn" class="control pass">不出</button>
+          <button id="playBtn" class="control play">出牌</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="helpDialog">
+    <div class="dialog-head">
+      <h2>掼蛋规则</h2>
+      <button id="closeHelp" class="ghost icon-btn" aria-label="关闭">×</button>
+    </div>
+    <div class="rules">
+      <h3>基本玩法</h3>
+      <p>四人使用两副扑克牌，对家为同队，每人27张。后手须出相同牌型且更大的牌，也可以用更大的炸弹压制。</p>
+      <h3>级牌与逢人配</h3>
+      <p>级牌大于A、小于大小王。两张红桃级牌称为“逢人配”，可替代除大小王之外的牌组成普通牌型。</p>
+      <h3>合法牌型</h3>
+      <p>单张、对子、三张、三带二、五张顺子、三连对、钢板、同花顺、四张及以上炸弹和四王炸。</p>
+      <h3>名次与升级</h3>
+      <p>头游搭档为二游升3级，为三游升2级，为末游升1级。</p>
+      <h3>实现范围</h3>
+      <p>当前版本已实现基础牌型、炸弹、名次和升级。逢人配自动组牌、进贡和还贡将在后续规则引擎中加入。</p>
+    </div>
+    <button id="closeHelpBottom" class="primary wide">知道了</button>
+  </dialog>
+
+  <script src="game.js"></script>
+  <script src="xiaomi.js"></script>
+</body>
+</html>
